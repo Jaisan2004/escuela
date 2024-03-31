@@ -25,7 +25,12 @@ body {
   height: 100px;
   border-radius: 50%;
 }
-
+.avatar2{
+  margin-top: 16px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
 h1 {
  font-size: 1.4em;
 }
@@ -77,7 +82,6 @@ a {
   color: rgb(0, 0, 0);
   border-radius: 10px;
   padding: 120px;
-  text-align: center;
   height: calc(100vh -  0px);
 }
 
@@ -95,10 +99,14 @@ a {
 }
 
 .s-sidebar__nav-link {
+  text-align: center;
   position: relative;
-  display: inline-block;
-  width: 100%;
+  display: block;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 159%;
   height: 4em;
+  
 }
 
 .s-sidebar__nav-link em {
@@ -127,12 +135,60 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-
-  
   .s-sidebar__nav {
     margin:0px;
   }
-  
+.imagen{
+  position: relative;
+  top:  20px;
+  left: 10px;
+}
+.imagen2{
+  position: relative;
+  top: -5px;
+  left: 45%;
+  width: -50%;
+  height: -50%;
+}
+.icono{
+  position: relative;
+  top: -5px;
+  right: 21%;
+  width: 50px;
+  height: 50px;
+  border-color: #ffffff;
+}
+.estudiante{
+  position: relative;
+  top: -35px;
+  right: 75px;
+}
+.nombre{
+  position: absolute; 
+  bottom: 65px;
+  left: 68%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+.nombre2{
+  position: absolute; 
+  top: 35%;
+  left: 86%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #ffffff;
+}
+.container{
+  position: relative;
+  top: -35px;
+  left: 15px;
+  width: 145%;
+  height: 145px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background: #706d7186;
+}
+
 
 
