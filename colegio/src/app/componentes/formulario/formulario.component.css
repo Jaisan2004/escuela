@@ -168,7 +168,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
   
   .form-submit {
     display: inline-block;
-    background: #6dabe4;
+    background: #0D062A;
     color: #fff;
     border-bottom: none;
     width: auto;
@@ -181,7 +181,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     margin-top: 25px;
     cursor: pointer; }
     .form-submit:hover {
-      background: #4292dc; }
+      background: #0d062ac6; }
   
   #signin {
     margin-top: 16px; }

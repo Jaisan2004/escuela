@@ -23,43 +23,36 @@
                             <input type="text" name="pet_nombre" id="pet_nombre" placeholder="Numero Identdicación" />
                         </div>
                         <div class="form-group">
-                            <label for="pet_nombre"><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="pet_nombre" id="pet_nombre" placeholder="Numero identificacion Estudiante" />
+                            <label for="Parentesco"><i class="zmdi zmdi-pet_descripcion"></i></label>
+                            <input type="text" name="Parentesco" id="Parentesco" placeholder="Parentesco" />
                         </div>
                         <div class="form-group">
                             <label for="pet_fecha_registro"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="text" name="pet_fecha_registro" id="pet_fecha_registro" placeholder="Fecha Registro" readonly/>
+                            <input type="number" name="Celular" id="Celular" placeholder="Numero Celular" />
                         </div>
                         <div class="form-group">
-                            <label for="pet_fecha_respuesta"><i class="zmdi zmdi-lock-outline"></i></label>
-                            <input type="text" name="pet_fecha_respuesta" id="pet_fecha_respuesta" placeholder="Fecha Respuesta" readonly/>
+                            <label for="correo"><i class="zmdi zmdi-lock-outline"></i></label>
+                            <input type="email" name="correo" id="correo" placeholder="Correo Electronico" />
                         </div>
                         <div class="form-group">
                             <label for="tipo_pe_id"><i class="zmdi zmdi-account material-icons-tipo_pe_id"></i></label>
-                            <input type="text" name="tipo_pe_id" id="tipo_pe_id" placeholder="Tipo Petición" readonly/>
+                            <input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa" />
                         </div>
                         <div class="form-group">
-                            <label for="abo_documento"><i class="zmdi zmdi-abo_documento"></i></label>
-                            <input type="text" name="abo_documento" id="abo_documento" placeholder="Documento" readonly/>
+                            <label for="direccion"><i class="zmdi zmdi-abo_documento"></i></label>
+                            <input type="text" name="direccion" id="direccion" placeholder="Direccion Trabajo"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo_pe_id"><i class="zmdi zmdi-account material-icons-tipo_pe_id"></i></label>
+                            <input type="text" name="ocupación" id="ocupación" placeholder="Ocupación" />
                         </div>
                         <div class="form-group">
                             <label for="id_clientes"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="text" name="id_clientes" id="id_clientes" placeholder="Clientes" readonly/>
+                            <input type="number" name="telefono" id="telefono" placeholder="Telefono Empresa"/>
                         </div>
-                        <div class="form-group">
-                            <label for="seg_id"><i class="zmdi zmdi-lock-outline"></i></label>
-                            <input type="text" name="seg_id" id="seg_id" placeholder="Seguimiento" readonly/>
-                        </div>
-                        <div class="form-group">
-                            <label for="seg_descripcion"><i class="zmdi zmdi-lock-outline"></i></label>
-                            <input type="text" name="seg_descripcion" id="seg_descripcion" placeholder="Descripción Seguimiento"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="pet_prioridad"><i class="zmdi zmdi-lock-outline"></i></label>
-                            <input type="text" name="pet_prioridad" id="pet_prioridad" placeholder="Prioridad" readonly/>
-                        </div>
+                        
                         <div class="form-group form-button">
-                            <input type="submit" name="signup" id="signup" class="form-submit" value="Actualizar"/>
+                            <input routerLink="/estudiante" type="submit" name="signup" id="signup" class="form-submit" value="Registrar"/>
                         </div>
                     </form>
                 </div>
