@@ -6,12 +6,10 @@ describe('FormularioMatriculaComponent', () => {
   let component: FormularioMatriculaComponent;
   let fixture: ComponentFixture<FormularioMatriculaComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [FormularioMatriculaComponent]
-    })
-    .compileComponents();
-    
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [FormularioMatriculaComponent]
+    });
     fixture = TestBed.createComponent(FormularioMatriculaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
