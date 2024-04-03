@@ -5,6 +5,7 @@ import { FormularioMatriculaComponent } from './componentes/formulario-matricula
 import { FormularioComponent } from './componentes/formulario/formulario.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { MatriculaComponent } from './componentes/matricula/matricula.component';
 
 const routes: Routes = [
     {path: '', redirectTo: "/login", pathMatch : "full"},
@@ -12,7 +13,9 @@ const routes: Routes = [
     {path:'inicio', component:InicioComponent},
     {path:'formulario', component:FormularioComponent},
     {path:'estudiante', component:FormularioEstudianteComponent},
-    {path:'matricula', component:FormularioMatriculaComponent}
+    {path:'gestion-m', component:FormularioMatriculaComponent},
+    {path:'matricula', component:MatriculaComponent}
+   
 ];
 
 @NgModule({
