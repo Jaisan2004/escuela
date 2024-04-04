@@ -8,6 +8,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { MatriculaComponent } from './componentes/matricula/matricula.component';
 import { InformacionComponent } from './componentes/informacion/informacion.component';
 import { TutorialComponent } from './componentes/tutorial/tutorial.component';
+import { MenuComponent } from './componentes/menu/menu.component';
 
 const routes: Routes = [
     {path: '', redirectTo: "/login", pathMatch : "full"},
@@ -18,7 +19,8 @@ const routes: Routes = [
     {path:'gestion-m', component:FormularioMatriculaComponent},
     {path:'matricula', component:MatriculaComponent},
     {path:'informacion', component:InformacionComponent},
-    {path:'tutorial', component:TutorialComponent}
+    {path:'tutorial', component:TutorialComponent},
+    {path:'menu', component:MenuComponent}
 ];
 
 @NgModule({
