@@ -95,35 +95,5 @@ export class FormularioComponent {
   // Asegúrate de que estas propiedades estén definidas y actualizadas en tu componente
   // Ejemplo
 
-  /*generarPDF() {
-    const doc = new jsPDF();
-    const fechaActual = new Date().toLocaleDateString();
-
-
-    const texto = `
-Confirmación de Matriculación del Estudiante
- 
-Nos complace informar que el estudiante ${this.nombre_estudiante}, con número de documento ${this.numero_documento_estudiante}, ha sido exitosamente matriculado en nuestro sistema para el periodo académico ${this.anio_periodo}. A continuación, detallamos la información del acudiente relacionada con esta matriculación:
- 
-- Nombre del Acudiente: ${this.nombre_acud || ''}
-- Apellido del Acudiente: ${this.apellido_acud || ''}
-- Cédula del Acudiente: ${this.cedula_acud || ''}
-- Relación con el Estudiante: ${this.relacion_estu_acud || ''}
-- Celular del Acudiente: ${this.celular_acud || ''}
-- Correo Electrónico del Acudiente: ${this.correo_acud || ''}
-- Empresa del Acudiente: ${this.empresa_trab_acud || ''}
-- Dirección del Trabajo del Acudiente: ${this.direccion_trab_acud || ''}
-- Ocupación del Acudiente: ${this.ocupacion_acud || ''}
-- Teléfono del Trabajo del Acudiente: ${this.telefono_trab_acud || ''}
- 
-Nos alegramos de contar con ${this.nombre_estudiante} como parte de nuestra comunidad educativa y estamos seguros de que su experiencia en nuestra institución será enriquecedora tanto para él/ella como para sus compañeros y profesores.
- 
-Para cualquier consulta o información adicional, no dude en ponerse en contacto con nosotros.
- 
-Fecha: ${fechaActual}`;
-
-    // Ajusta el inicio del texto y su máximo ancho para una correcta visualización
-    doc.text(texto, 10, 10, { maxWidth: 190 });
-    doc.save('Confirmacion_Matriculacion.pdf');
-  }*/
+  
 }
