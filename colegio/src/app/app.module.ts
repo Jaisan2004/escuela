@@ -15,6 +15,7 @@ import { InformacionComponent } from './componentes/informacion/informacion.comp
 import { TutorialComponent } from './componentes/tutorial/tutorial.component';
 import { MenuComponent } from './componentes/menu/menu.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,7 @@ import { MenuComponent } from './componentes/menu/menu.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

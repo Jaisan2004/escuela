@@ -18,6 +18,20 @@ function postEstudianteAcudiente(req, res) {
   });
 }
 
+function getParentsDocument(req, res) {
+  const cedula_acud = req.params.cedula_acud;
+
+  const query = 'SELECT * FROM acudiente WHERE cedula_acud = (?)'
+  dbConnection.query(query, [cedula_acud],(err, resultados) => {
+    if (err) {
+      console.error('Error al ejecutar la consulta: ', err);
+      res.status(500).send('Error interno del servidor');
+      return;
+    }
+    res.json(resultados);
+  });
+}
+
 
 module.exports = {
   postEstudianteAcudiente

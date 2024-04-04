@@ -1,63 +1,68 @@
 <app-inicio></app-inicio>
-
-<div class="main">
-
-    <!-- Sign up form -->
-    <section class="signup">
-        <div class="container">
-            <button routerLink="/matricula" class="btn btn-outline-dark back-button"><i class="bi bi-box-arrow-left"></i></button>
-            <div class="signup-content">
-                <div class="signup-form">
-                    <h2 class="form-title">Registro Acudiente</h2>
-                    <form method="POST" class="register-form" id="register-form">
-
-                        <div class="form-group">
-                            <label for="pet_nombre"><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="pet_nombre" id="pet_nombre" placeholder="Nombre" />
-                        </div>
-                        <div class="form-group">
-                            <label for="pet_nombre"><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="pet_nombre" id="pet_nombre" placeholder="Apellido" />
-                        </div>
-                        <div class="form-group">
-                            <label for="pet_nombre"><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="pet_nombre" id="pet_nombre" placeholder="Numero Identdicación" />
-                        </div>
-                        <div class="form-group">
-                            <label for="Parentesco"><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="Parentesco" id="Parentesco" placeholder="Parentesco" />
-                        </div>
-                        <div class="form-group">
-                            <label for="pet_fecha_registro"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="number" name="Celular" id="Celular" placeholder="Numero Celular" />
-                        </div>
-                        <div class="form-group">
-                            <label for="correo"><i class="zmdi zmdi-lock-outline"></i></label>
-                            <input type="email" name="correo" id="correo" placeholder="Correo Electronico" />
-                        </div>
-                        <div class="form-group">
-                            <label for="tipo_pe_id"><i class="zmdi zmdi-account material-icons-tipo_pe_id"></i></label>
-                            <input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa" />
-                        </div>
-                        <div class="form-group">
-                            <label for="direccion"><i class="zmdi zmdi-abo_documento"></i></label>
-                            <input type="text" name="direccion" id="direccion" placeholder="Direccion Trabajo" />
-                        </div>
-                        <div class="form-group">
-                            <label for="tipo_pe_id"><i class="zmdi zmdi-account material-icons-tipo_pe_id"></i></label>
-                            <input type="text" name="ocupación" id="ocupación" placeholder="Ocupación" />
-                        </div>
-                        <div class="form-group">
-                            <label for="id_clientes"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="number" name="telefono" id="telefono" placeholder="Telefono Empresa" />
-                        </div>
-
-                        <div class="form-group form-button">
-                            <input routerLink="/estudiante" type="submit" name="signup" id="signup" class="form-submit"
-                                value="Registrar" />
-                        </div>
-                    </form>
-                </div>
+<section class="signup">
+    <div class="container">
+        <button routerLink="/matricula" class="btn btn-outline-dark back-button"><i
+                class="bi bi-box-arrow-left"></i></button>
+        <div class="signup-content">
+            <div class="signup-form">
+                <h2 class="form-title">Registro Acudiente</h2>
+                <form class="register-form" id="register-form">
+                    <div class="form-group">
+                        <label for="cedula_acud"><i class="zmdi zmdi-account"></i></label>
+                        <input type="text" name="cedula_acud" id="cedula_acud" placeholder="Número de Identificación"
+                            [(ngModel)]="cedula_acud" (ngModelChange)="getAcudiente(cedula_acud)" />
+                    </div>
+                    <div class="form-group" *ngIf="data">
+                        <label for="nombre_acud"><i class="zmdi zmdi-account"></i></label>
+                        <input type="text" name="nombre_acud" id="nombre_acud" placeholder="Nombre"
+                            [(ngModel)]="nombre_acud" />
+                    </div>
+                    <div class="form-group" *ngIf="data">
+                        <label for="apellido_acud"><i class="zmdi zmdi-account"></i></label>
+                        <input type="text" name="apellido_acud" id="apellido_acud" placeholder="Apellido"
+                            [(ngModel)]="apellido_acud" />
+                    </div>
+                    <div class="form-group">
+                        <label for="relacion_estu_acud"><i class="zmdi zmdi-accounts-list"></i></label>
+                        <input type="text" name="relacion_estu_acud" id="relacion_estu_acud" placeholder="Parentesco"
+                            [(ngModel)]="relacion_estu_acud" />
+                    </div>
+                    <div class="form-group">
+                        <label for="celular_acud"><i class="zmdi zmdi-smartphone-android"></i></label>
+                        <input type="text" name="celular_acud" id="celular_acud" placeholder="Celular"
+                            [(ngModel)]="celular_acud" />
+                    </div>
+                    <div class="form-group" *ngIf="data">
+                        <label for="correo_acud"><i class="zmdi zmdi-email"></i></label>
+                        <input type="email" name="correo_acud" id="correo_acud" placeholder="Correo Electrónico"
+                            [(ngModel)]="correo_acud" />
+                    </div>
+                    <div class="form-group" *ngIf="data">
+                        <label for="empresa_trab_acud"><i class="zmdi zmdi-case"></i></label>
+                        <input type="text" name="empresa_trab_acud" id="empresa_trab_acud"
+                            placeholder="Nombre de la Empresa" [(ngModel)]="empresa_trab_acud" />
+                    </div>
+                    <div class="form-group" *ngIf="data">
+                        <label for="direccion_trab_acud"><i class="zmdi zmdi-pin"></i></label>
+                        <input type="text" name="direccion_trab_acud" id="direccion_trab_acud"
+                            placeholder="Dirección de Trabajo" [(ngModel)]="direccion_trab_acud" />
+                    </div>
+                    <div class="form-group" *ngIf="data">
+                        <label for="ocupacion_acud"><i class="zmdi zmdi-work"></i></label>
+                        <input type="text" name="ocupacion_acud" id="ocupacion_acud" placeholder="Ocupación"
+                            [(ngModel)]="ocupacion_acud" />
+                    </div>
+                    <div class="form-group" *ngIf="data">
+                        <label for="telefono_trab_acud"><i class="zmdi zmdi-phone"></i></label>
+                        <input type="text" name="telefono_trab_acud" id="telefono_trab_acud"
+                            placeholder="Teléfono de Empresa" [(ngModel)]="telefono_trab_acud" />
+                    </div>
+                    <div class="form-group form-button">
+                        <input (click)="updateAcudiente()" type="submit" name="signup" id="signup" class="form-submit"
+                            value="Registrar" />
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
