@@ -11,6 +11,8 @@ import { FormularioEstudianteComponent } from './componentes/formulario-estudian
 import { FormularioComponent } from './componentes/formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { InformacionComponent } from './componentes/informacion/informacion.component';
+import { TutorialComponent } from './componentes/tutorial/tutorial.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ToastrModule } from 'ngx-toastr';
     InicioComponent,
     FormularioMatriculaComponent,
     FormularioEstudianteComponent,
-    FormularioComponent
+    FormularioComponent,
+    InformacionComponent,
+    TutorialComponent
   ],
   imports: [
     BrowserModule,
