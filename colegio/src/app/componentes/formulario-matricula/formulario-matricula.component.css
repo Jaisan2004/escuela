@@ -477,5 +477,9 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     .social-label {
       margin-right: 0px;
       margin-bottom: 10px; } }
-  
+    .btn{
+    position: relative;
+    bottom: -20px;
+    left: 10px;
+    }
   /*# sourceMappingURL=style.css.map */
