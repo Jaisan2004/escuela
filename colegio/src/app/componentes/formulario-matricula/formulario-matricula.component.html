@@ -11,22 +11,26 @@
                     <h2 class="form-title">Gestionar matricula</h2>
                     <form method="POST" class="register-form" id="register-form">
                         <div class="form-group">
-                            <label for="pet_nombre"><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="pet_nombre" id="pet_nombre" placeholder="Nombre Estudiante" />
+                            <label for="nombre"><i class="zmdi zmdi-pet_descripcion"></i></label>
+                            <input type="text" name="nombre" id="nombre" [(ngModel)]="nombre_estu" placeholder="Nombre Estudiante" />
                         </div>
                         <div class="form-group">
-                            <label for="pet_nombre"><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="pet_nombre" id="pet_nombre" placeholder="Tipo Matriucla" />
+                            <label for="tipo matricula"><i class="zmdi zmdi-pet_descripcion"></i></label>
+                            <input type="text" name="tipo matricula" id="tipo matricula" [(ngModel)]="tipo_matricula" placeholder="Tipo Matriucla" />
                         </div>
                         <div class="form-group">
-                            <label for="pet_nombre"><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="fecha" id="fecha" placeholder="Valor Matriucla" readonly />
+                            <label for="valor"><i class="zmdi zmdi-pet_descripcion"></i></label>
+                            <input type="text" name="valor" id="valor" [(ngModel)]="valor" placeholder="Valor Matriucla" readonly />
                         </div>
 
 
-                        <div class="form-group form-button">
-                            <input  type="submit" name="signup" id="signup" class="form-submit"
-                                value="Registrar" />
+                        <div class=" form-button">
+
+                            <input  type="submit" name="signup" id="signup" class="form-submit" routerLink="/menu"
+                                value="Inicio" />
+
+                            <input  type="submit" class="form-submit"
+                                value="Generar Recibo" (click)="generarPDF()"/>
                         </div>
                     </form>
                 </div>

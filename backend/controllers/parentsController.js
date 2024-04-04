@@ -14,7 +14,7 @@ function getParentsDocument(req, res) {
     });
   }
 
-  function updateClient(req, res) {
+  function updateParent(req, res) {
     const id  = req.params.id;
     const { nombre_acud, apellido_acud, cedula_acud, relacion_estu_acud, celular_acud, correo_acud, empresa_trab_acud, direccion_trab_acud, ocupacion_acud,telefono_trab_acud } = req.body;
     const sqlQuery = `
@@ -36,5 +36,5 @@ function getParentsDocument(req, res) {
 
 module.exports = {
   getParentsDocument,
-  updateClient
+  updateParent
   };

@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
+
   data: any;
   nombre_acu: string | undefined;
   nombre_estu: string | undefined;
@@ -23,7 +24,11 @@ export class InicioComponent {
         console.error("Error al parsear estudiante: ", error);
       }
     }
+
+
   }
-  
+  cerrarSesion(){
+      localStorage.removeItem("estudiante");
+  }
 
 }

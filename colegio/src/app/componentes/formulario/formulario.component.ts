@@ -21,9 +21,6 @@ export class FormularioComponent {
   direccion_trab_acud: string | undefined;
   ocupacion_acud: string | undefined;
   telefono_trab_acud: string | undefined;
-  nombre_estudiante: string = 'Juan Pérez'; // Ejemplo, reemplaza con la variable correspondiente
-  numero_documento_estudiante: string = '123456789'; // Ejemplo
-  anio_periodo: string = '2023/2024';
 
   constructor(
     private toastr: ToastrService,
@@ -98,7 +95,7 @@ export class FormularioComponent {
   // Asegúrate de que estas propiedades estén definidas y actualizadas en tu componente
   // Ejemplo
 
-  generarPDF() {
+  /*generarPDF() {
     const doc = new jsPDF();
     const fechaActual = new Date().toLocaleDateString();
 
@@ -128,5 +125,5 @@ Fecha: ${fechaActual}`;
     // Ajusta el inicio del texto y su máximo ancho para una correcta visualización
     doc.text(texto, 10, 10, { maxWidth: 190 });
     doc.save('Confirmacion_Matriculacion.pdf');
-  }
+  }*/
 }
