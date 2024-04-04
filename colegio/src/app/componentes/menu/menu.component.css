@@ -1,0 +1,15 @@
+.d-block{
+    height: 501px;
+}
+
+.carousel-caption{
+    background-color: #5850508c;
+    border-radius: 10px;
+}
+.carousel-control-prev, .carousel-control-next{
+    color: rgb(97, 87, 87);
+    
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    color: rgb(97, 87, 87);
+}
