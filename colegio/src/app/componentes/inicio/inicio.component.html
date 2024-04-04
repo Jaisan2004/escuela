@@ -11,7 +11,7 @@
         <img class="avatar2 mat-elevation-z8" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLcJqxLd4ax9HQOic9Uv9DFfcvl1_l5CbMrw&usqp=CAU" alt="">
       </a>
       <a class="nombre2">
-        <i class="bi bi-list-task"></i><em>Pedro Cardenas Mendez</em>
+        <i class="bi bi-list-task"></i><em *ngIf="data">{{ nombre_acu }}</em>
       </a>
     </div>
   </nav>
@@ -26,10 +26,10 @@
                   <img class="avatar mat-elevation-z8" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoPm_vzM5yE5MBU4VGUB7tNKKd36OU41K1dw&usqp=CAU" alt="">
                 </a>
                 <a class="estudiante">
-                  <i class="bi bi-list-task"></i><em>Estudiante</em>
+                  <i class="bi bi-book-fill"><em>Estudiante</em></i>
                 </a>
                 <a class="nombre">
-                  <i class="bi bi-list-task"></i><em>Laura Cardenas Tovar</em>
+                  <i class="bi bi-list-task"></i><em>{{nombre_estu}}</em>
                 </a>
               </div>
               <li>

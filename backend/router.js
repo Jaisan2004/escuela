@@ -12,7 +12,8 @@ const app = express();
 app.use(express.json());
 
 //login admin
-router.post('/loginAcu', login.loginAcu);
+router.post('/loginEstu', login.loginAcu);
+router.post('/alumnoAcu', requestsController.postEstudianteAcudiente);
 
 
 module.exports = router;
