@@ -4,16 +4,16 @@ const bcrypt = require('bcryptjs');
 
 //INICIO SESION ABOGADO
 exports.loginAcu = async (req, res) => {
-    const acu_correo = req.body.acu_correo;
-    const acu_password = req.body.acu_password;
+    const estu_correo = req.body.estu_correo;
+    const estu_password = req.body.estu_password;
 
     try {
-        const query = `SELECT * FROM acudiente WHERE correo_acud = ? and contraseña = ?`;
-		const values = [acu_correo, acu_password];
+        const query = `SELECT * FROM estudiante WHERE correo_institu_estu = ? and contraseña = ?`;
+		const values = [estu_correo, estu_password];
         config.query(query, values, (err, resultados) => {
 			//usuarioEncontrado = resultados[0];
-			if (acu_correo && acu_password) {
-				if (resultados.length === 0 || acu_password != resultados[0].contraseña) {
+			if (estu_correo && estu_password) {
+				if (resultados.length === 0 || estu_password != resultados[0].contraseña) {
 					res.status(400).send({
 						alert: true,
 						alertTitle: "Error",
