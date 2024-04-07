@@ -397,9 +397,10 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
   
   .signin-image {
     position: relative;
+    padding-top: -30px;
     margin-left: 40px;
     margin-right: 20px;
-    margin-top: 30px;
+    margin-top: -20px;
     width: 580px;
     height: 320px; 
     border-radius: 10px;
@@ -433,14 +434,15 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
       padding: 0 30px; }
   
     .signin-image {
-      margin-left: 0px;
-      margin-right: 0px;
-      margin-top: 50px;
-      order: 2;
-      -moz-order: 2;
-      -webkit-order: 2;
-      -o-order: 2;
-      -ms-order: 2; }
+    position: relative;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 580px;
+    height: 320px; 
+    border-radius: 10px;
+    display: inline-block; }
   
     .signup-form, .signup-image, .signin-form, .signin-image {
       width: auto; }
