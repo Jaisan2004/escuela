@@ -13,16 +13,16 @@ export class LoginComponent {
   data: any;
 
   constructor(private toastr: ToastrService,
-    private router: Router){}
+    private router: Router) { }
 
   ngOnInit(): void {
-    
+
   }
-  
-  login(){
-    if(this.username == '' || this.password == ''){
-        this.toastr.error('Todos los campos son obligatorios');
-        return;
+
+  login() {
+    if (this.username == '' || this.password == '') {
+      this.toastr.error('Todos los campos son obligatorios');
+      return;
     }
 
     const data = {
@@ -31,32 +31,32 @@ export class LoginComponent {
     };
 
     fetch('http://localhost:3000/loginEstu/', {
-        method: 'POST',
-        headers:{
-            'Content-Type':'application/json',
-        },
-        body: JSON.stringify(data) // Enviamos los datos en el cuerpo de la solicitud como JSON
-    })
-    .then(response => {
-        if (response.ok) {
-            // Si la respuesta es exitosa (código de estado 200), mostrar un mensaje de éxito
-            this.toastr.success('Credenciales correctas');
-            this.router.navigate(['/menu']);
-        } else {
-            // Si la respuesta es un error (código de estado diferente de 200), mostrar un mensaje de error
-            this.toastr.error('Credenciales incorrectas');
-        }
-    })
-    .catch(error=>{
-        console.log(error);
-    });
-
-    fetch('http://localhost:3000/alumnoAcu',{
       method: 'POST',
-        headers:{
-            'Content-Type':'application/json',
-        },
-        body: JSON.stringify(data)
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data) // Enviamos los datos en el cuerpo de la solicitud como JSON
+    })
+      .then(response => {
+        if (response.ok) {
+          // Si la respuesta es exitosa (código de estado 200), mostrar un mensaje de éxito
+          this.toastr.success('Credenciales correctas');
+          this.router.navigate(['/menu']);
+        } else {
+          // Si la respuesta es un error (código de estado diferente de 200), mostrar un mensaje de error
+          this.toastr.error('Credenciales incorrectas');
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+
+    fetch('http://localhost:3000/alumnoAcu', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
     })
       .then(response => {
         if (response.ok) {
@@ -71,5 +71,5 @@ export class LoginComponent {
       .catch(error => {
         console.error(error);
       });
-}
+  }
 }
