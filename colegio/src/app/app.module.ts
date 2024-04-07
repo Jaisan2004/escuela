@@ -14,6 +14,11 @@ import { ToastrModule } from 'ngx-toastr';
 import { InformacionComponent } from './componentes/informacion/informacion.component';
 import { TutorialComponent } from './componentes/tutorial/tutorial.component';
 import { MenuComponent } from './componentes/menu/menu.component';
+import { EstudiantesComponent } from './admistrador/estudiantes/estudiantes.component';
+import { FormEstudianteComponent } from './admistrador/form-estudiante/form-estudiante.component';
+import { ProfesorComponent } from './admistrador/profesor/profesor.component';
+import { FormProfesorComponent } from './admistrador/form-profesor/form-profesor.component';
+import { HorarioComponent } from './componentes/horario/horario.component';
 
 
 @NgModule({
@@ -27,7 +32,12 @@ import { MenuComponent } from './componentes/menu/menu.component';
     FormularioComponent,
     InformacionComponent,
     TutorialComponent,
-    MenuComponent
+    MenuComponent,
+    EstudiantesComponent,
+    FormEstudianteComponent,
+    ProfesorComponent,
+    FormProfesorComponent,
+    HorarioComponent
   ],
   imports: [
     BrowserModule,
