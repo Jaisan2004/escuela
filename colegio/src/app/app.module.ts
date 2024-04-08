@@ -48,7 +48,6 @@ import { InicioAdminComponent } from './administrador/inicio-admin/inicio-admin.
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    DataTableDirective,
     ToastrModule.forRoot()
   ],
   providers: [],
