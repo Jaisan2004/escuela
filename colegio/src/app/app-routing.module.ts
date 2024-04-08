@@ -9,18 +9,19 @@ import { MatriculaComponent } from './componentes/matricula/matricula.component'
 import { InformacionComponent } from './componentes/informacion/informacion.component';
 import { TutorialComponent } from './componentes/tutorial/tutorial.component';
 import { MenuComponent } from './componentes/menu/menu.component';
+import { StorageCheckGuard } from './services/storage-check.service';
 
 const routes: Routes = [
-    {path: '', redirectTo: "/login", pathMatch : "full"},
+    {path: '', redirectTo: "/menu", pathMatch : "full"},
     {path:'login', component:LoginComponent},
     {path:'inicio', component:InicioComponent},
-    {path:'formulario', component:FormularioComponent},
-    {path:'estudiante', component:FormularioEstudianteComponent},
-    {path:'gestion-m', component:FormularioMatriculaComponent},
-    {path:'matricula', component:MatriculaComponent},
-    {path:'informacion', component:InformacionComponent},
-    {path:'tutorial', component:TutorialComponent},
-    {path:'menu', component:MenuComponent}
+    {path:'formulario', component:FormularioComponent, canActivate: [StorageCheckGuard]},
+    {path:'estudiante', component:FormularioEstudianteComponent, canActivate: [StorageCheckGuard]},
+    {path:'gestion-m', component:FormularioMatriculaComponent, canActivate: [StorageCheckGuard]},
+    {path:'matricula', component:MatriculaComponent, canActivate: [StorageCheckGuard]},
+    {path:'informacion', component:InformacionComponent, canActivate: [StorageCheckGuard]},
+    {path:'tutorial', component:TutorialComponent, canActivate: [StorageCheckGuard]},
+    {path:'menu', component:MenuComponent, canActivate: [StorageCheckGuard]}
 ];
 
 @NgModule({
