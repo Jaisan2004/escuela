@@ -10,6 +10,11 @@ import { InformacionComponent } from './componentes/informacion/informacion.comp
 import { TutorialComponent } from './componentes/tutorial/tutorial.component';
 import { MenuComponent } from './componentes/menu/menu.component';
 import { StorageCheckGuard } from './services/storage-check.service';
+import { LoginAdminComponent } from './administrador/login-admin/login-admin.component';
+import { InicioAdminComponent } from './administrador/inicio-admin/inicio-admin.component';
+import { MenuAdminComponent } from './administrador/menu-admin/menu-admin.component';
+import { EstudiantesComponent } from './administrador/estudiantes/estudiantes.component';
+import { ProfesorComponent } from './administrador/profesor/profesor.component';
 
 const routes: Routes = [
     {path: '', redirectTo: "/menu", pathMatch : "full"},
@@ -21,7 +26,12 @@ const routes: Routes = [
     {path:'matricula', component:MatriculaComponent, canActivate: [StorageCheckGuard]},
     {path:'informacion', component:InformacionComponent, canActivate: [StorageCheckGuard]},
     {path:'tutorial', component:TutorialComponent, canActivate: [StorageCheckGuard]},
-    {path:'menu', component:MenuComponent, canActivate: [StorageCheckGuard]}
+    {path:'menu', component:MenuComponent, canActivate: [StorageCheckGuard]},
+    {path:'menu-admin', component:MenuAdminComponent},
+    {path:'estudiantes', component:EstudiantesComponent},
+    {path:'profesor', component:ProfesorComponent},
+    {path:'login-admin', component:LoginAdminComponent},
+    {path:'inicio-admin', component:InicioAdminComponent},
 ];
 
 @NgModule({

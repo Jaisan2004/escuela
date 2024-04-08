@@ -1,0 +1,186 @@
+/* Primary Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #333;
+  }
+  
+  .navbar{
+    background: #0F0526;
+  }
+  
+  .jpg-icon {
+    max-width: 100%;
+    border-radius: 10px;
+    width:200px;
+  }
+  
+  .avatar{
+    margin-top: 16px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+  .avatar2{
+    margin-top: 16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  h1 {
+   font-size: 1.4em;
+  }
+  
+  em {
+    font-style: normal;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  } 
+  
+  /* Layout */
+  .s-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .s-layout__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+  
+  /* Sidebar */
+  .s-sidebar__trigger {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4em;
+    background: #002b3b;
+  }
+  
+  .s-sidebar__trigger > i {
+    display: inline-block;
+    margin: 1.5em 0 0 1.5em;
+    color: #36547a;
+  }
+  
+  .s-sidebar__nav {
+    margin: 160px;
+    width: 380px;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 120px;
+    height: calc(100vh -  0px);
+  }
+  
+  .s-sidebar__nav ul {
+    position: absolute;
+    top: 4em;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 15em;
+  }
+  
+  .s-sidebar__nav ul li {
+    width: 100%;
+  }
+  
+  .s-sidebar__nav-link {
+    text-align: center;
+    position: relative;
+    display: block;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 159%;
+    height: 4em;
+    
+  }
+  
+  .s-sidebar__nav-link em {
+    position: absolute;
+    top: 50%;
+    left: 4em;
+    transform: translateY(-50%);
+  }
+  
+  .s-sidebar__nav-link:hover {
+    background: #42404473;
+  }
+  
+  .s-sidebar__nav-link > i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+  }
+  
+  .s-sidebar__nav-link > i::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+    .s-sidebar__nav {
+      margin:0px;
+    }
+  .imagen{
+    position: relative;
+    width: 750px;
+    height: 750px;
+    top:  -65px;
+    left: 40px;
+  }
+  .imagen2{
+    position: relative;
+    top: -5px;
+    left: -0,5%;
+    width: -50%;
+    height: -50%;
+  }
+  .estudiante{
+    position: relative;
+    top: -35px;
+    right: 75px;
+  }
+  .nombre{
+    position: absolute; 
+    bottom: 65px;
+    left: 68%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+  }
+  .nombre2{
+    position: absolute; 
+    top: 35%;
+    left: 86%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #ffffff;
+  }
+  .container{
+    position: relative;
+    top: -35px;
+    left: 15px;
+    width: 145%;
+    height: 145px;
+  }
+  
+  
+  
+  

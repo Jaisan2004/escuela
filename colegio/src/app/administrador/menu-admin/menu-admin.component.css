@@ -1,0 +1,22 @@
+.carousel-caption h5 {
+    font-size: 28px; 
+}
+.carousel-caption{
+    font-size: 22px;
+    width: 60%;
+    left: 20%;
+    top: 40%;
+    bottom: 45%;
+    background-color: #5850508c;
+    border-radius: 10px;
+}
+.carousel-item{
+    width: 100%;
+    height: 100%;
+}
+.d-block{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+

@@ -1,0 +1,52 @@
+
+
+<!------ Include the above in your HEAD tag ---------->
+
+<nav class="navbar navbar-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="imagen2">
+        <img class="avatar2 mat-elevation-z8" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLcJqxLd4ax9HQOic9Uv9DFfcvl1_l5CbMrw&usqp=CAU" alt="">
+      </a>
+      <a class="nombre2">
+       <!-- <em *ngIf="data">{{ nombre_acu }}</em>-->
+      </a>
+    </div>
+  </nav>
+  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+  <div class="s-layout">
+      <!-- Sidebar -->
+      <div class="s-layout__sidebar">
+      <nav class="s-sidebar__nav">
+          <ul>
+            <div class="container">
+                <a class="imagen">
+                  <img class="avatar mat-elevation-z8" src="../../../assets/images/gBWgRWGwSreTAPw9e5VyCQ-removebg-preview.png" alt="">
+                </a>
+              </div>
+              <li>
+                <a class="s-sidebar__nav-link" routerLink = "/menu-admin">
+                    <i class="bi bi-house-door-fill"></i><em>Inicio</em>
+                </a>
+              </li>
+              <li>
+                <a class="s-sidebar__nav-link" routerLink = "/estudiantes">
+                    <i class="bi bi-people-fill" ></i><em>Estudiante</em>
+                </a>
+              </li>
+              <li>
+                <a class="s-sidebar__nav-link" routerLink="/profesor">
+                    <i class="bi bi-person-gear"></i><em>Profesor</em>
+                </a>
+              </li>
+              <li>
+                <a class="s-sidebar__nav-link" routerLink="/login-admin" >
+                    <i class="bi bi-box-arrow-left"></i><em>Cerrar Sesión</em>
+                </a>
+              </li>
+          </ul>
+      </nav>
+  </div>
+  </div>

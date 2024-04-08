@@ -400,10 +400,17 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     padding-top: -30px;
     margin-left: 40px;
     margin-right: 20px;
-    margin-top: -20px;
+    margin-top: -55px;
     width: 580px;
     height: 320px; 
     border-radius: 10px;
+  }
+
+  .link{
+    position: relative;
+    top: 380px;
+    right: 205px;
+    text-align: center;
   }
   
   @media screen and (max-width: 1200px) {
@@ -480,6 +487,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     .social-label {
       margin-right: 0px;
       margin-bottom: 10px; } }
+
   
   /*# sourceMappingURL=style.css.map */
   

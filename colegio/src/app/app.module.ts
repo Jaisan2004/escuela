@@ -20,6 +20,7 @@ import { EstudiantesComponent } from './administrador/estudiantes/estudiantes.co
 import { ProfesorComponent } from './administrador/profesor/profesor.component';
 import { FormEstudianteComponent } from './administrador/form-estudiante/form-estudiante.component';
 import { FormProfesorComponent } from './administrador/form-profesor/form-profesor.component';
+import { InicioAdminComponent } from './administrador/inicio-admin/inicio-admin.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { FormProfesorComponent } from './administrador/form-profesor/form-profes
     FormProfesorComponent,
     HorarioComponent,
     LoginAdminComponent,
-    MenuAdminComponent
+    MenuAdminComponent,
+    InicioAdminComponent
   ],
   imports: [
     BrowserModule,
