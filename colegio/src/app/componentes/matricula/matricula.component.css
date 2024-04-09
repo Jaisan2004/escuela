@@ -1,14 +1,14 @@
 .card{
-    width: 340px;
-    height: 250px;
     position: relative;
-    left: 40px;
-    right: 60px;
+    width: 65%;
+    height: 350px;
+    top: 15%;
+    right: -80px;
 }
 
 .btn {
     position: relative;
-    left: 88px;
+    left: 110px;
     background: #0D062A; 
 }
 .btn:hover{
