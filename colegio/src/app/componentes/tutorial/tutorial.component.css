@@ -1,0 +1,71 @@
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+
+        .video-container {
+            position: relative;
+            width: 700px;
+            height: 450px; /* Alto del video */
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           top: 20px;
+            right: -100px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+       
+        .back-button {
+            /* Agrega estilos específicos para el botón */
+            font-size: 16px; /* Tamaño de fuente */
+            padding: 9px 15px; /* Espaciado interno */
+            border-radius: 4px; /* Radio de borde */
+            position: relative;
+             top: 40px;
+            right: -2px;
+           
+        }
+        
+        .back-button i {
+            /* Estilos para el ícono dentro del botón */
+            margin-right: 4px; /* Margen a la derecha del ícono para separarlo del texto */
+            position: relative;
+            bottom: 2px;
+            left: 60px;
+          
+        }
+
+        .Tutorial{
+
+            width: 900px;
+            background: #fff;
+            margin: 0 auto;
+            box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+            -webkit-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+            -o-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+            -ms-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -o-border-radius: 20px;
+            -ms-border-radius: 20px;
+            height: 550px;
+        }
+        
+
+    
