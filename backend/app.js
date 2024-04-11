@@ -3,7 +3,12 @@ const session = require('express-session');
 const routes = require('./router');
 const env = require('dotenv').config({path: './.env'});
 const cors = require('cors');
+const mongoose = require ('mongoose')
 
+
+mongoose.connect('')
+  .then(() => console.log('Conectado a MongoDB'))
+  .catch((error) => console.error('No se pudo conectar a MongoDB', error));
 
 const app = express();
 
