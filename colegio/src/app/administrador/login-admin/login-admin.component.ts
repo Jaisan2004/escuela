@@ -10,7 +10,6 @@ import { ToastrService } from 'ngx-toastr';
 export class LoginAdminComponent {
   username: string = '';
   password: string = '';
-  data: any;
 
   constructor(private toastr: ToastrService,
     private router: Router) { }
@@ -51,25 +50,25 @@ export class LoginAdminComponent {
         console.log(error);
       });
 
-    // fetch('http://localhost:3000/alumnoAcu', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(data)
-    // })
-    //   .then(response => {
-    //     if (response.ok) {
-    //       return response.json();
-    //     } else {
-    //       throw new Error('Error en la operación fetch');
-    //     }
-    //   })
-    //   .then(data => {
-    //     localStorage.setItem("estudiante", JSON.stringify(data));
-    //   })
-    //   .catch(error => {
-    //     console.error(error);
-    //   });
+    fetch('http://localhost:3000/admin', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Error en la operación fetch');
+        }
+      })
+      .then(data => {
+        localStorage.setItem("admin", JSON.stringify(data));
+      })
+      .catch(error => {
+        console.error(error);
+      });
   }
 }

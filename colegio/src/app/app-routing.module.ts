@@ -21,6 +21,7 @@ import { FormProfesorComponent } from './administrador/form-profesor/form-profes
 import { InfoMatriculaComponent } from './componentes/info-matricula/info-matricula.component';
 import { AgreEstudianteComponent } from './administrador/agre-estudiante/agre-estudiante.component';
 import { AgreProfesorComponent } from './administrador/agre-profesor/agre-profesor.component';
+import { SesionAdminService } from './services/sesion-admin.service';
 
 const routes: Routes = [
     {path: '', redirectTo: "/menu", pathMatch : "full"},
@@ -35,15 +36,18 @@ const routes: Routes = [
     {path:'informacion', component:InformacionComponent, canActivate: [StorageCheckGuard]},
     {path:'tutorial', component:TutorialComponent, canActivate: [StorageCheckGuard]},
     {path:'menu', component:MenuComponent, canActivate: [StorageCheckGuard]},
-    {path:'menu-admin', component:MenuAdminComponent},
-    {path:'estudiantes', component:EstudiantesComponent},
-    {path:'profesor', component:ProfesorComponent},
+    {path:'menu-admin', component:MenuAdminComponent, canActivate: [SesionAdminService]},
+    {path:'estudiantes', component:EstudiantesComponent, canActivate: [SesionAdminService]},
+    {path:'profesor', component:ProfesorComponent, canActivate: [SesionAdminService]},
     {path:'login-admin', component:LoginAdminComponent},
     {path:'inicio-admin', component:InicioAdminComponent},
     {path:'form-estudiante', component:FormEstudianteComponent},
     {path:'form-profesor', component:FormProfesorComponent},
     {path:'agre-estudiante', component:AgreEstudianteComponent},
     {path:'agre-profesor', component:AgreProfesorComponent},
+    {path:'inicio-admin', component:InicioAdminComponent, canActivate: [SesionAdminService]},
+    {path:'form-estudiante', component:FormEstudianteComponent, canActivate: [SesionAdminService]},
+    {path:'form-profesor', component:FormProfesorComponent, canActivate: [SesionAdminService]},
 ];
 
 @NgModule({

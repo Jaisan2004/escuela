@@ -1,13 +1,12 @@
 <app-inicio-admin></app-inicio-admin>
 <div class="container tabla"> 
-    <table datatable class="table" >
+    <table class="table">
       <thead>
         <tr style="text-align: center;">
           <th scope="col">#</th>
           <th scope="col">Nombre</th>
           <th scope="col">Apellido</th>
           <th scope="col">Documento Identidad</th>
-          <th scope="col">Fecha Nacimiento</th>
           <th scope="col">Dirección</th>
           <th scope="col">Genero</th>
           <th scope="col">Correo</th>
@@ -19,19 +18,18 @@
         </tr>
       </thead>
       <tbody class="table-group-divider">
-        <tr style="text-align: center;">
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>mdo</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>mdo</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>mdo</td>
+        <tr style="text-align: center;" *ngFor="let item of data">
+          <th scope="row">{{item.id_estu}}</th>
+          <td>{{item.nombre_estu}}</td>
+          <td>{{item.apellido_estu}}</td>
+          <td>{{item.documento_identidad}}</td>
+          <td>{{item.direccion_estu}}</td>
+          <td>{{item.genero_estu}}</td>
+          <td>{{item.correo_institu_estu}}</td>
+          <td>{{item.nombre_acu}}</td>
+          <td>{{item.nombre_grupo}}</td>
           <td colspan="2"> 
-            <button class="btn btn-outline-primary bi bi-pencil-fill" routerLink="/form-estudiante"></button>
+            <button class="btn btn-outline-primary bi bi-pencil-fill" [routerLink]="['/form-estudiante', item]"></button>
             <button class="btn btn-outline-danger bi bi-trash"></button>
           </td>
         </tr>

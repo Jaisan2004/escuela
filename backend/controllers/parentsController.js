@@ -14,6 +14,19 @@ function getParentsDocument(req, res) {
     });
   }
 
+  function getParentsAcu(req, res) {
+
+    const query = 'SELECT a.id_acud, concat(a.nombre_acud," ",a.apellido_acud) as nombre FROM `acudiente` a ORDER BY nombre;'
+    dbConnection.query(query,(err, resultados) => {
+      if (err) {
+        console.error('Error al ejecutar la consulta: ', err);
+        res.status(500).send('Error interno del servidor');
+        return;
+      }
+      res.json(resultados);
+    });
+  }
+
   function updateParent(req, res) {
     const id  = req.params.id;
     const { nombre_acud, apellido_acud, cedula_acud, relacion_estu_acud, celular_acud, correo_acud, empresa_trab_acud, direccion_trab_acud, ocupacion_acud,telefono_trab_acud } = req.body;
@@ -36,5 +49,6 @@ function getParentsDocument(req, res) {
 
 module.exports = {
   getParentsDocument,
+  getParentsAcu,
   updateParent
   };

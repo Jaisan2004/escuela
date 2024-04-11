@@ -11,32 +11,53 @@
                     <form class="register-form" id="register-form">
                         <div class="form-group">
                             <label for="Tarjeta"><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="Tarjeta" id="Tarjeta"  placeholder="Tarjeta de Identificación" />
+                            <input type="text" name="Tarjeta" id="Tarjeta" [(ngModel)]="documento_identidad" placeholder="Tarjeta de Identificación" />
                         </div>
                         <div class="form-group">
                             <label for="nombre"><i class="zmdi zmdi-descripcion"></i></label>
-                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
+                            <input type="text" name="nombre" id="nombre" [(ngModel)]="nombre_estu" placeholder="Nombre" />
                         </div>
                         <div class="form-group">
                             <label for="Apellido"><i class="zmdi zmdi-descripcion"></i></label>
-                            <input type="text" name="Apellido" id="Apellido"  placeholder="Apellido" />
+                            <input type="text" name="Apellido" id="Apellido" [(ngModel)]="apellido_estu" placeholder="Apellido" />
                         </div>
                         <div class="form-group">
                             <label for="direccion"><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="direccion" id="direccion" placeholder="Direccion" />
+                            <input type="text" name="direccion" id="direccion" [(ngModel)]="direccion_estu" placeholder="Direccion" />
                         </div>
                        
                         <div class="form-group">
-                            <label for="genero  "><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="genero" id="genero"  placeholder="Genero" />
+                            <p>Genero</p>
+                        <select class="form-select" aria-label="Default select example" name="genero" id="genero" [(ngModel)]="genero_estu">
+                            <option [value]="'F'">Femenino</option>
+                            <option [value]="'M'">Masculino</option>
+                            <option [value]="'O'">Otro</option>
+                          </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="correo"><i class="zmdi zmdi-lock-outline"></i></label>
+                            <input type="email" name="correo" id="correo" [(ngModel)]="estu_correo" placeholder="Correo Institucional" />
                         </div>
                         <div class="form-group">
                             <label for="correo"><i class="zmdi zmdi-lock-outline"></i></label>
-                            <input type="email" name="correo" id="correo"  placeholder="Correo Institucional" />
+                            <input type="password" name="password" id="password" [(ngModel)]="estu_password" placeholder="Contraseña" />
+                        </div>
+                        <div class="form-group">
+                            <p>Acudiente</p>
+                        <select class="form-select" aria-label="Default select example" name="id_acudiente" id="id_acudiente" [(ngModel)]="id_acudiente">
+                            <option *ngFor="let option of dataAcud" [value]="option.id_acud">{{ option.nombre }}</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                            <p>Grupo</p>
+                        <select class="form-select" aria-label="Default select example" name="id_grupo" id="id_grupo" [(ngModel)]="id_grupo">
+                            <option *ngFor="let option of dataGrupo" [value]="option.id_grupo">{{ option.nombre_grupo }}</option>
+                          </select>
                         </div>
                         
                         <div class="form-group form-button">
-                            <input  type="submit" name="signup" id="signup" class="form-submit" value="Registrar"/>
+                            <input  type="submit" name="signup" id="signup" class="form-submit" (click)="postEstudiante()" value="Registrar"/>
                         </div>
                     </form>
                 </div>
