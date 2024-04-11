@@ -1,0 +1,18 @@
+.horario{
+    position: relative;
+    top: 50px;
+    left: 100px;
+    width: 90%;
+}
+.title {
+    color: #000000;
+    text-align: center;
+    
+}
+.table{
+    position: relative;
+    top: 30px;
+    border-style: solid;
+    text-align: center;
+    height: 600px;
+}

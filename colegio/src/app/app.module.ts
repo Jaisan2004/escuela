@@ -21,6 +21,9 @@ import { ProfesorComponent } from './administrador/profesor/profesor.component';
 import { FormEstudianteComponent } from './administrador/form-estudiante/form-estudiante.component';
 import { FormProfesorComponent } from './administrador/form-profesor/form-profesor.component';
 import { InicioAdminComponent } from './administrador/inicio-admin/inicio-admin.component';
+import { AgreEstudianteComponent } from './administrador/agre-estudiante/agre-estudiante.component';
+import { AgreProfesorComponent } from './administrador/agre-profesor/agre-profesor.component';
+import { InfoMatriculaComponent } from './componentes/info-matricula/info-matricula.component';
 
 
 @NgModule({
@@ -42,7 +45,10 @@ import { InicioAdminComponent } from './administrador/inicio-admin/inicio-admin.
     HorarioComponent,
     LoginAdminComponent,
     MenuAdminComponent,
-    InicioAdminComponent
+    InicioAdminComponent,
+    AgreEstudianteComponent,
+    AgreProfesorComponent,
+    InfoMatriculaComponent,
   ],
   imports: [
     BrowserModule,
