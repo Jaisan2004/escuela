@@ -1,8 +1,5 @@
 <app-inicio-admin></app-inicio-admin>
 <div class="container tabla"> 
-    <div class="container titulo">
-
-    </div>
     <table datatable class="table" >
       <thead>
         <tr style="text-align: center;">
@@ -19,7 +16,7 @@
           <th scope="col" colspan="2"></th> 
         </tr>
       </thead>
-      <tbody>
+      <tbody class="table-group-divider">
         <tr style="text-align: center;">
           <th scope="row">1</th>
           <td>Mark</td>
@@ -32,9 +29,8 @@
           <td>Otto</td>
           <td>mdo</td>
           <td colspan="2"> 
-            <button class="btn btn-outline-primary">Editar</button>
-            <br>
-            <button class="btn btn-outline-danger">Eliminar</button>
+            <button class="btn btn-outline-primary bi bi-pencil-fill" routerLink="/form-estudiante"></button>
+            <button class="btn btn-outline-danger bi bi-trash"></button>
           </td>
         </tr>
       </tbody>
