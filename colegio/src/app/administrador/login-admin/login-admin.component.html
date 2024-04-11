@@ -15,14 +15,14 @@
                     <form method="POST" class="register-form" id="login-form">
                         <div class="form-group">
                             <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="your_name" id="your_name"  placeholder="Nombre" required/>
+                            <input type="text" name="your_name" id="your_name"  placeholder="Nombre" [(ngModel)]="username" required/>
                         </div>
                         <div class="form-group">
                             <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="password" name="your_pass" id="your_pass"  placeholder="Contraseña" required/>
+                            <input type="password" name="your_pass" id="your_pass"  placeholder="Contraseña" [(ngModel)]="password" required/>
                         </div>
                         <div class="form-group form-button">
-                            <input type="submit" name="signin" id="signin" class="form-submit" value="Iniciar"/>
+                            <input type="submit" name="signin" id="signin" class="form-submit" (click)="loginAdmin()"/>
                         </div>
                     </form>
                 </div>

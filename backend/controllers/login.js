@@ -43,21 +43,43 @@ exports.loginAcu = async (req, res) => {
     }
 };
 
-exports.validarSesion =  (req, res)=> {
-    //TODO: validar si el usuario está logueado
-    //Debemos de crear una cookie desde el frontend que será igual al token de inicio de sesión de express
-	if (req.session.loggedin) {
-        res.send('loggeado');
-		// res.send('index',{
-		// 	login: true,
-		// 	name: req.session.name			
-		// });		
-	} else {
-        res.send('no loggeado');
-		// res.send('index',{
-		// 	login:false,
-		// 	name:'Debe iniciar sesión',			
-		// });				
-	}
-	res.end();
+exports.loginAdmin = async (req, res) => {
+    const correo_admin = req.body.correo_admin;
+    const contraseña_admin = req.body.contraseña_admin;
+
+    try {
+        const query = `SELECT * FROM administrador WHERE correo_admin = ? and contraseña_admin = ?`;
+		const values = [correo_admin, contraseña_admin];
+        config.query(query, values, (err, resultados) => {
+			//usuarioEncontrado = resultados[0];
+			if (correo_admin && contraseña_admin) {
+				if (resultados.length === 0 || contraseña_admin != resultados[0].contraseña_admin) {
+					res.status(400).send({
+						alert: true,
+						alertTitle: "Error",
+						alertMessage: "credenciales incorrectas",
+						ruta: 'login'
+					  });
+				} else {
+					req.session.loggedin = true;
+					req.session.name = resultados[0].name;
+					res.status(200).send({
+						alert: true,
+						alertTitle: "Conexión exitosa",
+						alertMessage: "Success",
+						alertIcon: 'success',
+						ruta: ''
+					});
+				}
+				res.end();
+			} else {
+				res.send('Please enter user and Password!');
+				res.end();
+			}
+		});
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Error de servidor');
+    }
 };
+
