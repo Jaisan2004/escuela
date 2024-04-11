@@ -15,11 +15,15 @@ import { InicioAdminComponent } from './administrador/inicio-admin/inicio-admin.
 import { MenuAdminComponent } from './administrador/menu-admin/menu-admin.component';
 import { EstudiantesComponent } from './administrador/estudiantes/estudiantes.component';
 import { ProfesorComponent } from './administrador/profesor/profesor.component';
+import { HorarioComponent } from './componentes/horario/horario.component';
+import { FormEstudianteComponent } from './administrador/form-estudiante/form-estudiante.component';
+import { FormProfesorComponent } from './administrador/form-profesor/form-profesor.component';
 
 const routes: Routes = [
     {path: '', redirectTo: "/menu", pathMatch : "full"},
     {path:'login', component:LoginComponent},
     {path:'inicio', component:InicioComponent},
+    {path:'horario', component:HorarioComponent},
     {path:'formulario', component:FormularioComponent, canActivate: [StorageCheckGuard]},
     {path:'estudiante', component:FormularioEstudianteComponent, canActivate: [StorageCheckGuard]},
     {path:'gestion-m', component:FormularioMatriculaComponent, canActivate: [StorageCheckGuard]},
@@ -32,6 +36,8 @@ const routes: Routes = [
     {path:'profesor', component:ProfesorComponent},
     {path:'login-admin', component:LoginAdminComponent},
     {path:'inicio-admin', component:InicioAdminComponent},
+    {path:'form-estudiante', component:FormEstudianteComponent},
+    {path:'form-profesor', component:FormProfesorComponent},
 ];
 
 @NgModule({
