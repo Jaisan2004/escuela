@@ -10,28 +10,19 @@
                     <form class="register-form" id="register-form">
                         <div class="form-group">
                             <label for="Tarjeta"><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="Tarjeta" id="Tarjeta"  placeholder="Tarjeta de Identificación" />
+                            <input type="text" name="Tarjeta" id="Tarjeta" [(ngModel)]="documento_identidad" placeholder="Tarjeta de Identificación" />
                         </div>
                         <div class="form-group">
                             <label for="nombre"><i class="zmdi zmdi-descripcion"></i></label>
-                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
+                            <input type="text" name="nombre" id="nombre" [(ngModel)]="nombre" placeholder="Nombre Completo" />
                         </div>
-                        <div class="form-group">
-                            <label for="Apellido"><i class="zmdi zmdi-descripcion"></i></label>
-                            <input type="text" name="apellido" id="apellido"  placeholder="Apellido" />
-                        </div>
-                        <div class="form-group">
-                            <label for="direccion"><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="direccion" id="direccion" placeholder="Direccion" />
-                        </div>
-                       
                         <div class="form-group">
                             <label for="genero  "><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="genero" id="genero"  placeholder="Genero" />
+                            <input type="text" name="genero" id="genero" [(ngModel)]="genero" placeholder="Genero" />
                         </div>
                         <div class="form-group">
                             <label for="correo"><i class="zmdi zmdi-lock-outline"></i></label>
-                            <input type="email" name="correo" id="correo"  placeholder="Correo Institucional" />
+                            <input type="email" name="correo" id="correo" [(ngModel)]="correo" placeholder="Correo Institucional" />
                         </div>
                         
                         <div class="form-group form-button">

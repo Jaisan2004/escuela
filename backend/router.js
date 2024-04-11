@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const admin = require('./controllers/adminController');
 const students = require('./controllers/studentsController');
+const teacher = require('./controllers/teacherController');
 const group = require('./controllers/groupController');
 const login = require('./controllers/login');
 const parentsController = require('./controllers/parentsController');
@@ -53,6 +54,16 @@ router.put('/acudMatri/:id', parentsController.updateParent);
 /*GRUPOS*/
 //Traer datos del grupo
 router.get('/grupo', group.getGrupo);
+
+/* PROFESORES */
+//Trae a todos los profesores
+router.get('/profesores', teacher.getProfesores);
+
+//Registrar nuevo profesor
+router.post('/profesor', teacher.postProfesor);
+
+//Modificar los datos del profesor admin
+router.put('/profesor/:id', teacher.updateProfesor);
 
 
 module.exports = router;

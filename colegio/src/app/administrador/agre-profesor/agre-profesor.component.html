@@ -10,32 +10,32 @@
                     <h2 class="form-title">Agregar Profesor</h2>
                     <form class="register-form" id="register-form">
                         <div class="form-group">
-                            <label for="Tarjeta"><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="Tarjeta" id="Tarjeta"  placeholder="Tarjeta de Identificación" />
-                        </div>
-                        <div class="form-group">
                             <label for="nombre"><i class="zmdi zmdi-descripcion"></i></label>
-                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
+                            <input type="text" name="nombre" id="nombre" [(ngModel)]="nombre_prof" placeholder="Nombre" />
                         </div>
                         <div class="form-group">
                             <label for="Apellido"><i class="zmdi zmdi-descripcion"></i></label>
-                            <input type="text" name="apellido" id="apellido"  placeholder="Apellido" />
+                            <input type="text" name="apellido" id="apellido" [(ngModel)]="apellido_prof" placeholder="Apellido" />
                         </div>
                         <div class="form-group">
                             <label for="correo"><i class="zmdi zmdi-lock-outline"></i></label>
-                            <input type="email" name="correo" id="correo"  placeholder="Correo Institucional" />
+                            <input type="email" name="correo" id="correo" [(ngModel)]="correo_institu_prof" placeholder="Correo Institucional" />
                         </div>
                         <div class="form-group">
                             <label for="direccion"><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="celular" id="celular" placeholder="Celular" />
+                            <input type="text" name="celular" id="celular" [(ngModel)]="celular_prof" placeholder="Celular" />
                         </div>
                        
                         <div class="form-group">
                             <label for="genero  "><i class="zmdi zmdi-pet_descripcion"></i></label>
-                            <input type="text" name="cargo" id="cargo"  placeholder="Cargo" />
+                            <input type="text" name="cargo" id="cargo" [(ngModel)]="cargo" placeholder="Cargo" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password"><i class="zmdi zmdi-pet_descripcion"></i></label>
+                            <input type="password" name="password" id="password" [(ngModel)]="contrasena" placeholder="Contraseña" />
                         </div>
                         <div class="form-group form-button">
-                            <input  type="submit" name="signup" id="signup" class="form-submit" value="Registrar"/>
+                            <input  type="submit" name="signup" id="signup" class="form-submit" (click)="postEstudiante()" value="Registrar"/>
                         </div>
                     </form>
                 </div>

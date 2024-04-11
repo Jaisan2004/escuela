@@ -21,7 +21,7 @@ function postEstudianteAcudiente(req, res) {
   const estu_password = req.body.estu_password;
 
   const query = 'SELECT concat(estu.nombre_estu," ", estu.apellido_estu) as nombre_estu, estu.correo_institu_estu, estu.genero_estu, estu.documento_identidad,' +
-    'concat(acu.nombre_acud," ", acu.apellido_acud) as nombre_acu, acu.cedula_acud, acu.relacion_estu_acud FROM estudiante estu JOIN acudiente acu WHERE estu.id_acudiente = acu.id_acud and estu.correo_institu_estu = (?) and estu.contraseña = (?);';
+    'concat(acu.nombre_acud," ", acu.apellido_acud) as nombre_acu, acu.cedula_acud, acu.relacion_estu_acud FROM estudiante estu JOIN acudiente acu WHERE estu.id_acudiente = acu.id_acud and estu.correo_institu_estu = (?) and estu.contrasena = (?);';
 
   dbConnection.query(query, [estu_correo, estu_password], (err, resultados) => {
     if (err) {

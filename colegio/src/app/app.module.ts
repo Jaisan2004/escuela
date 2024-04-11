@@ -24,7 +24,9 @@ import { InicioAdminComponent } from './administrador/inicio-admin/inicio-admin.
 import { AgreEstudianteComponent } from './administrador/agre-estudiante/agre-estudiante.component';
 import { AgreProfesorComponent } from './administrador/agre-profesor/agre-profesor.component';
 import { InfoMatriculaComponent } from './componentes/info-matricula/info-matricula.component';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,10 @@ import { InfoMatriculaComponent } from './componentes/info-matricula/info-matric
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

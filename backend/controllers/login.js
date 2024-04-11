@@ -2,18 +2,18 @@ const config = require('../database/db');
 const sql = require('mssql');
 const bcrypt = require('bcryptjs');
 
-//INICIO SESION ABOGADO
-exports.loginAcu = async (req, res) => {
+//INICIO SESION estudiante
+ async function loginAcu(req, res) {
     const estu_correo = req.body.estu_correo;
     const estu_password = req.body.estu_password;
 
     try {
-        const query = `SELECT * FROM estudiante WHERE correo_institu_estu = ? and contraseña = ?`;
+        const query = `SELECT * FROM estudiante WHERE correo_institu_estu = ? and contrasena = ?`;
 		const values = [estu_correo, estu_password];
         config.query(query, values, (err, resultados) => {
 			//usuarioEncontrado = resultados[0];
 			if (estu_correo && estu_password) {
-				if (resultados.length === 0 || estu_password != resultados[0].contraseña) {
+				if (resultados.length === 0 || estu_password != resultados[0].contrasena) {
 					res.status(400).send({
 						alert: true,
 						alertTitle: "Error",
@@ -43,7 +43,7 @@ exports.loginAcu = async (req, res) => {
     }
 };
 
-exports.loginAdmin = async (req, res) => {
+async function loginAdmin (req, res) {
     const correo_admin = req.body.correo_admin;
     const contraseña_admin = req.body.contraseña_admin;
 
@@ -83,3 +83,7 @@ exports.loginAdmin = async (req, res) => {
     }
 };
 
+module.exports = {
+	loginAcu,
+	loginAdmin
+	};

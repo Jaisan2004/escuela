@@ -15,18 +15,19 @@
         </tr>
       </thead>
       <tbody class="table-group-divider">
-        <tr style="text-align: center;">
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>mdo</td>
-          <td>Mark</td>
-          <td>Otto</td>
+        <tr style="text-align: center;" *ngFor="let item of data">
+          <th scope="row">{{item.id_prof}}</th>
+          <td>{{item.nombre_prof}}</td>
+          <td>{{item.apellido_prof}}</td>
+          <td>{{item.correo_institu_prof}}</td>
+          <td>{{item.celular_prof}}</td>
+          <td>{{item.cargo}}</td>
           <td colspan="2"> 
-            <button class="btn btn-outline-primary bi bi-pencil-fill" routerLink="/form-profesor"></button>
+            <button class="btn btn-outline-primary bi bi-pencil-fill" [routerLink]="['/form-profesor', item]"></button>
             <button class="btn btn-outline-danger bi bi-trash"></button>
           </td>
         </tr>
       </tbody>
     </table>
+    
 </div>
