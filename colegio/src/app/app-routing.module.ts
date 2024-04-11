@@ -18,12 +18,16 @@ import { ProfesorComponent } from './administrador/profesor/profesor.component';
 import { HorarioComponent } from './componentes/horario/horario.component';
 import { FormEstudianteComponent } from './administrador/form-estudiante/form-estudiante.component';
 import { FormProfesorComponent } from './administrador/form-profesor/form-profesor.component';
+import { InfoMatriculaComponent } from './componentes/info-matricula/info-matricula.component';
+import { AgreEstudianteComponent } from './administrador/agre-estudiante/agre-estudiante.component';
+import { AgreProfesorComponent } from './administrador/agre-profesor/agre-profesor.component';
 
 const routes: Routes = [
     {path: '', redirectTo: "/menu", pathMatch : "full"},
     {path:'login', component:LoginComponent},
     {path:'inicio', component:InicioComponent},
     {path:'horario', component:HorarioComponent},
+    {path:'info-matricula', component:InfoMatriculaComponent},
     {path:'formulario', component:FormularioComponent, canActivate: [StorageCheckGuard]},
     {path:'estudiante', component:FormularioEstudianteComponent, canActivate: [StorageCheckGuard]},
     {path:'gestion-m', component:FormularioMatriculaComponent, canActivate: [StorageCheckGuard]},
@@ -38,6 +42,8 @@ const routes: Routes = [
     {path:'inicio-admin', component:InicioAdminComponent},
     {path:'form-estudiante', component:FormEstudianteComponent},
     {path:'form-profesor', component:FormProfesorComponent},
+    {path:'agre-estudiante', component:AgreEstudianteComponent},
+    {path:'agre-profesor', component:AgreProfesorComponent},
 ];
 
 @NgModule({
